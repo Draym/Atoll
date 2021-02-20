@@ -1,0 +1,52 @@
+logging:
+  config:
+  level:
+    ROOT: INFO
+
+server:
+  port: 9009
+
+spring:
+  application:
+    name: atoll-api
+  main:
+    web-application-type: servlet
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dev-atoll-01
+    username: root
+    password:
+
+  flyway:
+    table: flyway_schema_history
+    installed-by: auto_migration_spring
+
+  profiles:
+    active: #active-profiles#
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+      write-date-timestamps-as-nanoseconds: false
+    deserialization:
+      read-date-timestamps-as-nanoseconds: false
+  output:
+    ansi:
+      enabled: ALWAYS
+  data:
+    web:
+      pageable:
+        default-page-size: 200
+        max-page-size: 2000
+        one-indexed-parameters: true
+        page-parameter: pageIndex
+        size-parameter: pageSize
+
+  servlet:
+    multipart:
+      max-file-size: 180MB
+      max-request-size: 180MB
+      file-size-threshold: 10MB
+  mvc:
+    locale: en
+    locale-resolver: accept_header
+    throw-exception-if-no-handler-found: true
