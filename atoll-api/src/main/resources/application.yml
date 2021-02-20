@@ -50,3 +50,12 @@ spring:
     locale: en
     locale-resolver: accept_header
     throw-exception-if-no-handler-found: true
+
+reddit:
+  username: Livid_Ad_3854
+  password: aznola71
+  clientId: tdTfIWX5AnFMDg
+  clientSecret: uyX1mUwk_s_IIhmKJqPCFbb8ToPlng
+  appPlatform: script
+  appId: io.chobbie.reddit
+  appVersion: v0.1
