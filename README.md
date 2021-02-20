@@ -1,2 +1,2 @@
 # Atoll
-Saas application to manage web applications and services on Linux
+Saas application to generate analytics from social networks related to stock markets
